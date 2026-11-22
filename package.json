@@ -7,11 +7,8 @@
     "@fortawesome/fontawesome-free": "^6.1.1",
     "animejs": "^3.2.1"
   },
-  "devDependencies": {
-    "node-sass": "^7.0.1"
-  },
   "scripts": {
-    "css-build": "node-sass --omit-source-map-url sass -o css",
+    "css-build": "sass --no-source-map sass:css",
     "css-watch": "npm run css-build -- --watch",
     "start": "npm run css-watch",
     "copy-libraries": "cp node_modules/@fortawesome/fontawesome-free/js/all.js js/ && cp node_modules/animejs/lib/anime.min.js js/",
@@ -26,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/InfernalHydra/infernalhydra.github.io/issues"
   },
-  "homepage": "https://github.com/InfernalHydra/infernalhydra.github.io#readme"
+  "homepage": "https://github.com/InfernalHydra/infernalhydra.github.io#readme",
+  "devDependencies": {
+    "sass": "^1.108.2"
+  }
 }
